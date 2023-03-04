@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Товары Пользователя</title>
+    <link rel="stylesheet" th:href="@{/main.css}">
+</head>
+<body>
+<div th:replace="layouts/header :: header">
+
+</div>
+
+<main class="container">
+    <div class="items" th:if="${!items.isEmpty()}">
+        <div th:each="el : ${items}">
+            <a th:href="'/item/' + ${el.id}"><img th:src="${el.image}" th:alt="${el.title}"></a>
+            <h3 th:text="${el.title}" />
+            <p th:text="${el.info}" />
+            <span th:text="${el.price} + '$'" />
+        </div>
+    </div>
+
+    <div th:if="${items.isEmpty()}" class="block">
+        <p>Нет товаров</p>
+    </div>
+</main>
+
+<div th:replace="layouts/footer :: footer">
+
+</div>
+</body>
+</html>

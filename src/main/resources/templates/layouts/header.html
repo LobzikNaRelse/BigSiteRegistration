@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<header class="container" xmlns:th="http://www.thymeleaf.org"
+        xmlns:sec="http://www.thymeleaf.org/extras/spring-security" th:fragment="header">
+    <span class="logo">Sashop</span>
+    <nav>
+        <a href="/">Главная</a>
+        <a href="/about-us">О нас</a>
+
+        <span sec:authorize="!isAuthenticated()">
+        <a href="/login">Авторизация</a>
+        <a href="/reg">Регистрация</a>
+        </span>
+
+        <span sec:authorize="isAuthenticated()">
+        <a href="/user">Кабинет пользователя</a>
+        <a href="/item/add">Добавить товар</a>
+        </span>
+
+        <span sec:authorize="hasAuthority('ADMIN')">
+        <a href="/panel-admin">Панель Администратора</a>
+        </span>
+
+    </nav>
+</header>

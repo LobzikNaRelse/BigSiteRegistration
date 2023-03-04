@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+img
+{
+  width: 100%;
+}
+
+body
+{
+  background: #fcfcfc;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+a
+{
+  text-decoration: none;
+  color: #6f6f6f;
+  transition: color 500ms ease;
+}
+
+a:hover
+{
+  color: #1f1f1f;
+}
+
+.container
+{
+  width: 1258px;
+  margin: 0 auto;
+}
+
+header.container
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+header .logo 
+{
+  color: #222;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+header nav 
+{
+  margin-left: 15px;
+}
+
+main.container > div.block
+{
+  width: 100%;
+  padding: 20px;
+  border: 1px solid silver;
+  border-bottom-width: 2px;
+  background-color: #ebebeb;
+  line-height: 170%;
+}
+
+.presentation 
+{
+  float: left;
+  width: 100%;
+  background: red;
+  padding: 50px 200px;
+  box-sizing: border-box;
+  margin-bottom: 70px;
+}
+
+.presentation h2
+{
+  color: white;
+  font-size: 35px;
+  padding-top: 90px;
+}
+
+.presentation p 
+{
+  color: #622424;
+  font-size: 16px;
+  padding-top: 7px;
+  max-width: 380px;
+}
+
+.presentation img 
+{
+  float: right;
+  width: 300px;
+}
+
+.items 
+{
+  display: flex;
+  float: left;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.items > div 
+{
+  width: 100%;
+  margin-bottom: 30px;
+  background-color: #333;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.items > div > h3
+{
+  color: #fff;
+  margin: 7px;
+  font-size: 23px;
+}
+
+.items > div > p 
+{
+  color: #a7a7a7;
+}
+
+.items > div > span 
+{
+  background-color: #fdbd01;
+  padding: 10px;
+  position: relative;
+  top: 30px;
+  font-weight: 600;
+  color: #6a5412;
+}
+
+header
+{
+    background: #222;
+}
+
+form input, form textarea
+{
+  width: 300px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid silver;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  display: block;
+  margin-top: 20px;
+  resize: none;
+}
+
+form button, .edit-btn
+{
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #cb5e49;
+  transition: background 500ms ease;
+}
+
+form button:hover
+{
+  background: #964434;
+}
+
+footer
+{
+  float: left;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  text-align: center;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Кабинет пользователя</title>
+    <link rel="stylesheet" th:href="@{/main.css}">
+</head>
+<body>
+<div th:replace="layouts/header :: header">
+
+</div>
+
+<main class="container">
+    <h1>Кабинет пользователя</h1>
+    <p>Привет, <span sec:authentication="name" /></p>
+    <h1>Изменить данные</h1>
+    <form method="post">
+        <input type="text" name="username" th:value="${user.username}" placeholder="Введите новый логин">
+        <input type="password" name="password" th:value="${user.password}" placeholder="Введите новый пароль">
+        <input type="email" name="email" th:value="${user.email}" placeholder="Введите email">
+        <select th:field="${user.roles}"  name="roles">
+            <option th:value="USER" th:text="Пользователь"></option>
+            <option th:value="ADMIN" th:text="Администратор"></option>
+            <option th:value="REDACTOR" th:text="Редактор"></option>
+        </select>
+
+        <button type="submit">Изменить</button>
+    </form>
+    <div th:text="${a}" style="color: green"/>
+    <form method="post" th:action="@{/logout}">
+        <button type="submit">Выйти</button>
+    </form>
+</main>
+
+<div th:replace="layouts/footer :: footer">
+
+</div>
+
+</body>
+</html>

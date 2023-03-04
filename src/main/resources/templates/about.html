@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>О нас</title>
+    <link rel="stylesheet" th:href="@{/main.css}">
+</head>
+<body>
+<div th:replace="layouts/header :: header">
+
+</div>
+
+<main class="container">
+    <div class="block">
+        <h1>Про нас</h1>
+        <p th:text="${name}"></p>
+        <p th:text="'Hello, ' + ${name1}"></p>
+    </div>
+</main>
+
+<div th:replace="layouts/footer :: footer">
+
+</div>
+
+</body>
+</html>

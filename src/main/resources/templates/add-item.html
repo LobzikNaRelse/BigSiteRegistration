@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить статью</title>
+    <link rel="stylesheet" th:href="@{/main.css}">
+</head>
+<body>
+<div th:replace="layouts/header :: header">
+
+</div>
+
+<main class="container">
+    <h1>Добавить статью</h1>
+    <form method="post" th:action="@{/item/add}">
+        <input type="text" name="title" placeholder="Введите название">
+        <input type="text" name="image" placeholder="Введите url картинки">
+        <input type="number" name="price" placeholder="Введите цену">
+        <textarea name="info" placeholder="Введите описание"></textarea>
+        <button type="submit">Добавить</button>
+    </form>
+</main>
+
+<div th:replace="layouts/footer :: footer">
+
+</div>
+
+</body>
+</html>
